@@ -11,9 +11,15 @@ DBD += oneWire.dbd
 # oneWire.dbd will be made up from these files:
 oneWire_DBD += base.dbd
 oneWire_DBD += asyn.dbd
-oneWire_DBD += stream.dbd
+#oneWire_DBD += stream.dbd
 oneWire_DBD += drvAsynIPPort.dbd
+oneWire_DBD += calcSupport.dbd
 oneWire_DBD += oneWireConvert.dbd
+oneWire_DBD += system.dbd
+oneWire_DBD += asSupport.dbd
+oneWire_DBD += devIocStats.dbd
+oneWire_DBD += stream.dbd
+oneWire_DBD += caPutLog.dbd
 
 # oneWire_registerRecordDeviceDriver.cpp derives from oneWire.dbd
 oneWire_SRCS += oneWire_registerRecordDeviceDriver.cpp
@@ -29,6 +35,15 @@ oneWire_SRCS_vxWorks += -nil-
 
 # Link in the code from the support library
 oneWire_LIBS += asyn stream
+oneWire_LIBS += calc
+oneWire_LIBS += caPutLog
+oneWire_LIBS += devIocStats
+oneWire_LIBS += autosave
+
+# Channel Finder
+oneWire_DBD  += reccaster.dbd
+oneWire_LIBS += reccaster
+
 
 # Finally link to the EPICS Base libraries
 oneWire_LIBS += $(EPICS_BASE_IOC_LIBS)

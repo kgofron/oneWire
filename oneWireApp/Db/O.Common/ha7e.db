@@ -5,7 +5,7 @@
 record (stringin, "XF-Test{DS2438:1}ID-I")
 {
         field(DESC, "64-bit ID")
-        field(VAL, "$(ID,undefined)")
+        field(VAL, "$(ID)")
   	field(UDF, "0") 
   	field(PINI, "1")
 }
@@ -259,7 +259,7 @@ record (stringin, "XF-Test{DS18B20:1}ID-I")
 record (stringin, "XF-Test{DS18B20:1}ID-I")
 {
         field(DESC, "64-bit ID")
-        field(VAL, "$(ID,undefined)")
+        field(VAL, "$(ID)")
 }
 
 
@@ -375,7 +375,7 @@ record(longin, "XF-Test{DS18B20:1}T:Lo-RB")
 record (stringin, "XF-Test{DS18B20:2}ID-I")
 {
         field(DESC, "64-bit ID")
-        field(VAL, "$(ID,undefined)")
+        field(VAL, "$(ID)")
 }
 
 
